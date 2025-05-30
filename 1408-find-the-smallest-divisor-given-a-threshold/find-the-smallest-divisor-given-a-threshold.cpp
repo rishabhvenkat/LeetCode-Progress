@@ -9,6 +9,7 @@ int sumByD(vector<int> &arr, int div) {
     return sum;
 }
     int smallestDivisor(vector<int>& nums, int threshold) {
+        if (nums.size() > threshold) return -1;
         int low = 1, high = *max_element(nums.begin(), nums.end());
         while(low <= high) {
             int mid = (low + high) / 2;
